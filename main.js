@@ -108,8 +108,7 @@ let gameState = 'load';
 function update() {
     if (!ticks) {
         // start = Date.now();
-        lastBeat = -20;
-        lastMeasure = -1;
+        
 
     }
 
@@ -140,6 +139,10 @@ function update() {
             midiPlayer.play();
             synth.triggerAttack('G#3');
             console.log('started synth');
+
+            lastBeat = -20;
+            lastMeasure = -1;
+            
             gameState = 'running';
             break;
         case 'running':
